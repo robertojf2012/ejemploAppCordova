@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { Geolocation } from '@ionic-native/geolocation';
+import { BackgroundMode } from '@ionic-native/background-mode';
 
 declare var google;
 
@@ -14,7 +15,11 @@ export class AboutPage {
 	longitud: number;
 	map: any;
 
-  constructor(public navCtrl: NavController, private geolocation: Geolocation) {
+  constructor(public navCtrl: NavController, private geolocation: Geolocation, private backgroundMode: BackgroundMode) {
+  	if(this.backgroundMode.isEnabled())
+  	{
+  		console.log("BACKGROUND!!!");
+  	}
   }
 
   ionViewDidLoad() {
