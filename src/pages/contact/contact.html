@@ -1,17 +1,35 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Contact
+      API
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-8>
+        <ion-item>
+          <ion-label floating>Nombre</ion-label>
+          <ion-input type="text" value="" [(ngModel)]="nombre"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-4>
+        <button ion-button color="secondary" outline (click)="createUser()">Guardar</button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
   <ion-list>
-    <ion-list-header>Follow us on Twitter</ion-list-header>
-    <ion-item>
-      <ion-icon name="ionic" item-start></ion-icon>
-      @ionicframework
+    <ion-item *ngFor="let usuario of usuarios">
+      <ion-avatar item-start>
+        <img src="https://ionicframework.com/docs/v3/dist/preview-app/www/assets/img/avatar-ts-woody.png">
+      </ion-avatar>
+      <h2>{{ usuario.name }}</h2>
+      <p>{{ usuario.email }}</p>
+      <p>{{ usuario.address.city }}</p>
     </ion-item>
   </ion-list>
 </ion-content>
