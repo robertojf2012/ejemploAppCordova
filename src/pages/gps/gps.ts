@@ -6,10 +6,10 @@ import { BackgroundMode } from '@ionic-native/background-mode';
 declare var google;
 
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-gps',
+  templateUrl: 'gps.html'
 })
-export class AboutPage {
+export class GpsPage {
 
 	latitud: number;
 	longitud: number;

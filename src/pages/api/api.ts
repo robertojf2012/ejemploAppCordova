@@ -4,10 +4,10 @@ import { ApiProvider } from './../../providers/api/api';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'page-contact',
-  templateUrl: 'contact.html'
+  selector: 'page-api',
+  templateUrl: 'api.html'
 })
-export class ContactPage {
+export class ApiPage {
 
 	apiData: Observable<any>;
   usuarios: any[] = [];

@@ -1,5 +1,4 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 /*
@@ -25,15 +24,15 @@ export class ApiProvider {
   }
 
 	createUser(name:string, movies:string[]){    
-	    let infoData = {
-	      "name":name,
-	      "movies": movies
-	    };
-	    return this.http.post(`https://reqres.in/api/users`, infoData, {
-	      headers:{
-	        'content-Type'  : 'application/json',
-	        'Accept'        : 'application/json'
-	      }
-	    });
+    let infoData = {
+      "name":name,
+      "movies": movies
+    };
+    return this.http.post(`https://reqres.in/api/users`, infoData, {
+      headers:{
+        'content-Type'  : 'application/json',
+        'Accept'        : 'application/json'
+      }
+    });
 	}
 }

@@ -15,7 +15,10 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class PruebaPage {
 
+	texto: string;
+
   constructor(public navCtrl: NavController, public navParams: NavParams) {
+  	this.texto = navParams.get("itemData");
   }
 
   ionViewDidLoad() {

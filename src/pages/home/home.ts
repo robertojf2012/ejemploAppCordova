@@ -13,12 +13,10 @@ export class HomePage {
   }
 
   gotoPage(){
-  	this.navCtrl.push(PruebaPage);
-  	/*
-		this.navCtrl.push(DetalleEventoPage, {
-	    eventoId: evento.id
+  	//this.navCtrl.push(PruebaPage);
+		this.navCtrl.push(PruebaPage, {
+	    itemData: "wii, estoy en otra pagina"
 	  });
-  	*/
   }
 
 }

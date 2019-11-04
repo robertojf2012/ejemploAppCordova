@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Formulario</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+	<form novalidate [formGroup]='registroForm' (ngSubmit)="registrar()">
+		
+		<ion-item>
+			<ion-label floating>Nombre</ion-label>
+			<ion-input type="text" formControlName="nombre" [(ngModel)]="nombreModel"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Correo Electronico</ion-label>
+			<ion-input type="email" formControlName="correo" [(ngModel)]="correoModel"></ion-input>
+		</ion-item>
+
+		<ion-item>
+			<ion-label floating>Usuario</ion-label>
+			<ion-input type="text" formControlName="usuario" [(ngModel)]="usuarioModel"></ion-input>
+		</ion-item>
+
+		<br>
+
+		<button ion-button block type="submit">Registrar</button>
+
+	</form>
+
+</ion-content>
