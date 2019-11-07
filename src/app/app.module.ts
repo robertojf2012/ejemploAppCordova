@@ -10,6 +10,9 @@ import { ApiPage } from '../pages/api/api';
 import { HomePage } from '../pages/home/home';
 import { TabsPage } from '../pages/tabs/tabs';
 import { PruebaPage } from '../pages/prueba/prueba';
+import { FavoritosPage } from '../pages/favoritos/favoritos';
+import { EditarFavoritoPage } from '../pages/editar-favorito/editar-favorito';
+import { NuevoFavoritoPage } from '../pages/nuevo-favorito/nuevo-favorito';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -26,7 +29,10 @@ import { BackgroundMode } from '@ionic-native/background-mode';
     ApiPage,
     HomePage,
     TabsPage,
-    PruebaPage
+    PruebaPage,
+    FavoritosPage,
+    EditarFavoritoPage,
+    NuevoFavoritoPage
   ],
   imports: [
     BrowserModule,
@@ -41,7 +47,10 @@ import { BackgroundMode } from '@ionic-native/background-mode';
     ApiPage,
     HomePage,
     TabsPage,
-    PruebaPage
+    PruebaPage,
+    FavoritosPage,
+    EditarFavoritoPage,
+    NuevoFavoritoPage
   ],
   providers: [
     StatusBar,

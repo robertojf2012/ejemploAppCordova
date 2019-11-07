@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 import { PruebaPage } from '../prueba/prueba';
+import { FavoritosPage } from '../favoritos/favoritos';
 
 @Component({
   selector: 'page-home',
@@ -17,6 +18,10 @@ export class HomePage {
 		this.navCtrl.push(PruebaPage, {
 	    itemData: "wii, estoy en otra pagina"
 	  });
+  }
+
+  gotoFavoritos(){
+    this.navCtrl.push(FavoritosPage);
   }
 
 }
